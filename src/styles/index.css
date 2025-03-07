@@ -1,11 +1,71 @@
-/* 
+body {
+    min-height: 450px;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(ellipse farthest-corner at center top, #d8c4bb 0%, #383132 100%);
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+  }
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+  .container{
+    margin-top: 30px;
+    max-width: 540px;
+  }
 
-*/
+.item-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 30px;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    border-bottom: 2px solid #383132 ;
+}
+
+.item-list i {
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    flex-shrink: 0;
+    padding: 5px 10px;
+}
+
+.item-list:hover {
+    background-color: #53585d;
+    border-radius: 25px;
+}
+
+.item-list:hover input[type=checkbox],
+.item-list:hover label,
+.item-list:hover i {
+    color: #242629;
+}
+
+.item-list:hover i {
+    opacity: 1;
+    color: rgba(221, 75, 75, 0.742);
+    
+}
+
+.item-list input[type=checkbox] {
+    flex-shrink: 0;
+}
+
+.item-list label {
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    max-width: 100%;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+input[type=checkbox]:checked+label {
+    color: #AEB7C6;
+    text-decoration: line-through;
+    font-style: italic;
+  }
